@@ -223,6 +223,89 @@ There are many shortcuts commands in Linux that can help you be more productive.
 
 ---
 
+## 11. tmux - Terminal Multiplexer
+
+`tmux` is a terminal multiplexer that allows you to manage multiple terminal sessions within one window. It’s great for running multiple programs simultaneously and for managing long-running processes.
+
+### Basic `tmux` Commands
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `tmux` | Start a new tmux session | `tmux`: Starts a new tmux session |
+| `tmux new-session -s session_name` | Start a new tmux session with a specific name | `tmux new-session -s my_session`: Starts a new session named "my_session" |
+| `tmux attach -t session_name` | Attach to an existing tmux session | `tmux attach -t my_session`: Attaches to the session named "my_session" |
+| `tmux ls` | List all tmux sessions | `tmux ls`: Lists all available tmux sessions |
+| `tmux kill-session -t session_name` | Kill a specific tmux session | `tmux kill-session -t my_session`: Kills the "my_session" tmux session |
+| `tmux detach` | Detach from the current tmux session | Press `Ctrl + b`, then `d`: Detaches from the current session |
+| `tmux kill-session` | Kill the current tmux session | `tmux kill-session`: Kills the current session |
+
+### Window and Pane Management
+
+- **Windows**: Each tmux session can have multiple windows (like tabs in a browser).
+- **Panes**: Each window can be split into multiple panes (like dividing your terminal screen).
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `Ctrl + b c` | Create a new window | `Ctrl + b c`: Creates a new window in the current session |
+| `Ctrl + b n` | Switch to the next window | `Ctrl + b n`: Switches to the next window |
+| `Ctrl + b p` | Switch to the previous window | `Ctrl + b p`: Switches to the previous window |
+| `Ctrl + b 0-9` | Switch to a specific window | `Ctrl + b 2`: Switches to window 2 |
+| `Ctrl + b w` | List all windows | `Ctrl + b w`: Lists all windows in the session |
+| `Ctrl + b %` | Split the current window vertically | `Ctrl + b %`: Splits the window into two vertical panes |
+| `Ctrl + b "` | Split the current window horizontally | `Ctrl + b "`: Splits the window into two horizontal panes |
+| `Ctrl + b o` | Switch between panes | `Ctrl + b o`: Moves to the next pane |
+| `Ctrl + b x` | Close the current pane | `Ctrl + b x`: Closes the current pane |
+| `Ctrl + b {` | Move the current pane left | `Ctrl + b {`: Moves the current pane to the left |
+| `Ctrl + b }` | Move the current pane right | `Ctrl + b }`: Moves the current pane to the right |
+
+### Session and Window Management
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `Ctrl + b d` | Detach from the session | `Ctrl + b d`: Detaches from the session and leaves it running in the background |
+| `Ctrl + b &` | Close the current window | `Ctrl + b &`: Closes the current window |
+| `Ctrl + b ,` | Rename the current window | `Ctrl + b ,`: Renames the current window to a new name |
+| `Ctrl + b s` | List all sessions | `Ctrl + b s`: Lists all active tmux sessions |
+| `Ctrl + b l` | List the last window | `Ctrl + b l`: Switches to the last active window |
+
+### Resizing Panes
+
+You can resize tmux panes to allocate more space for one particular pane.
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `Ctrl + b :` | Enter command mode | `Ctrl + b :`: Enter command mode to type tmux commands |
+| `resize-pane -D` | Resize pane down | `Ctrl + b :resize-pane -D`: Shrinks the pane downward |
+| `resize-pane -U` | Resize pane up | `Ctrl + b :resize-pane -U`: Shrinks the pane upward |
+| `resize-pane -L` | Resize pane left | `Ctrl + b :resize-pane -L`: Shrinks the pane left |
+| `resize-pane -R` | Resize pane right | `Ctrl + b :resize-pane -R`: Shrinks the pane right |
+
+### Saving and Restoring Sessions
+
+You can save your tmux sessions and restore them later.
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `tmux save-buffer /path/to/file` | Save the buffer contents to a file | `tmux save-buffer output.txt`: Saves the buffer to a file named "output.txt" |
+| `tmux load-buffer /path/to/file` | Load content from a file into the buffer | `tmux load-buffer output.txt`: Loads content from "output.txt" into the tmux buffer |
+
+### Copy and Paste Mode
+
+You can enter copy mode in tmux to scroll through the terminal output and copy text.
+
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `Ctrl + b [` | Enter copy mode | `Ctrl + b [`: Enter copy mode |
+| `Up/Down Arrow` | Scroll through the terminal output | Use the arrow keys to scroll through the terminal |
+| `Space` | Start selection | `Space`: Starts selecting text |
+| `Enter` | Copy selected text | `Enter`: Copies the selected text |
+| `Ctrl + b ]` | Paste the copied text | `Ctrl + b ]`: Pastes the copied text into the current pane |
+
+---
+
+These are some of the basic and advanced `tmux` commands that will help you get started with terminal multiplexing. You can create, manage, and navigate between multiple terminal sessions with ease, making tmux an invaluable tool for anyone working in the terminal.
+
+
 ## Conclusion
 
 In conclusion, Linux is a widely used operating system for development, and as a developer, you should have knowledge of Linux and its basic commands. In this Cheat Sheet, we covered all commands like creating directories, file compression and archiving, process management, system information, networking, and more. In addition to that, this Linux Cheat Sheet is organized and categorized, making it easy for developers to quickly find the commands they need for specific use cases. By utilizing this resource, developers can enhance their productivity and efficiency in working with Linux, leading to smoother and more successful development projects.
